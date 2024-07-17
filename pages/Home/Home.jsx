@@ -6,6 +6,7 @@ import {
 } from "expo-location";
 import { useEffect, useState } from "react";
 import { MeteoAPI } from "../../api/meteo";
+import { Txt } from "../../components/Txt/Txt";
 
 export function Home() {
   const [coords, setCoords] = useState();
@@ -43,7 +44,9 @@ export function Home() {
 
   return (
     <>
-      <View style={s.meteo_basic}></View>
+      <View style={s.meteo_basic}>
+        <Txt style={{ fontSize: 60 }}>Hello</Txt>
+      </View>
       <View style={s.searchbar_container}></View>
       <View style={s.meteo_advanced}></View>
     </>
