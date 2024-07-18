@@ -1,23 +1,21 @@
 import { StyleSheet } from "react-native";
 
 const s = StyleSheet.create({
-  header: {
+  container: {
     flexDirection: "row",
-  },
-  header_texts: {
-    flex: 1,
+    justifyContent: "space-evenly",
     alignItems: "center",
-    marginRight: 30,
+    marginHorizontal: 20,
   },
-  back_btn: {
-    width: 30,
+  image: {
+    height: 50,
+    width: 50,
   },
-
-  subtitle: {
+  day: {
     fontSize: 20,
   },
-  forecastList: {
-    marginTop: 50,
+  date: {
+    fontSize: 20,
   },
 });
 
