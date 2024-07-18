@@ -1,4 +1,4 @@
-import { Text, View } from "react-native";
+import { Alert, Text, View } from "react-native";
 import { s } from "./Home.style";
 import {
   requestForegroundPermissionsAsync,
@@ -56,7 +56,14 @@ export function Home() {
     setCity(cityResponse);
   }
 
-  console.log(weather);
+  async function fetchCoordsByCity(city) {
+    try {
+      const coords = await MeteoAPI.fetchCoordsFromCity(city);
+      setCoords(coords);
+    } catch (e) {
+      Alert.alert("Oups!", e);
+    }
+  }
 
   function goToForecastPage() {
     nav.navigate("Forecast", { city, ...weather.daily });
@@ -73,7 +80,7 @@ export function Home() {
         />
       </View>
       <View style={s.searchbar_container}>
-        <Searchbar />
+        <Searchbar onSubmit={fetchCoordsByCity} />
       </View>
       <View style={s.meteo_advanced}>
         <MeteoAdvanced
