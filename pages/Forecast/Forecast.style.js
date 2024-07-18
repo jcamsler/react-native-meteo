@@ -1,14 +1,20 @@
 import { StyleSheet } from "react-native";
 
 const s = StyleSheet.create({
-  meteo_basic: {
-    flex: 2,
+  header: {
+    flexDirection: "row",
   },
-  searchbar_container: {
-    flex: 2,
-  },
-  meteo_advanced: {
+  header_texts: {
     flex: 1,
+    alignItems: "center",
+    marginRight: 30,
+  },
+  back_btn: {
+    width: 30,
+  },
+
+  subtitle: {
+    fontSize: 20,
   },
 });
 
