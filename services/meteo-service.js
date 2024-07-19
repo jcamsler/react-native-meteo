@@ -20,13 +20,14 @@ export const WEATHER_INTERPRATIONS = [
     image: require("../assets/snow.png"),
   },
   {
-    codes: [96, 99],
+    codes: [95, 96, 99],
     label: "Orageux",
     image: require("../assets/thunder.png"),
   },
 ];
 
 export function getWeatherInterpretation(code) {
+  console.log("weather code:" + code);
   return WEATHER_INTERPRATIONS.find((interpretation) =>
     interpretation.codes.includes(code)
   );
