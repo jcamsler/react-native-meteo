@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "react-native-meteo",
-    "slug": "react-native-meteo",
+    "slug": "meteo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -12,7 +12,8 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.jcamsler.meteo"
     },
     "android": {
       "adaptiveIcon": {
@@ -23,6 +24,18 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a21defd3-fb2d-4c2b-9727-57c485f40412"
+      }
+    },
+    "owner": "jcamsler",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/a21defd3-fb2d-4c2b-9727-57c485f40412"
     }
   }
 }
